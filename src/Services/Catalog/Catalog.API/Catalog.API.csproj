@@ -4,17 +4,23 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>4c65dcc2-28af-418d-a43f-078f283a871d</UserSecretsId>
+    <UserSecretsId>65052539-c504-4a96-b7c3-d2bd4d2f669b</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
+
+    <PackageReference Include="Carter" Version="8.0.0" />
+
+    <PackageReference Include="Marten" Version="6.4.1" />
+
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\EShopMicroservice.ServiceDefaults\EShopMicroservice.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,14 @@
+services:
+  catalogdb:
+    image: postgres:latest # Replace with your preferred PostgreSQL image and version
+    container_name: catalogdb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: KlajdiUser     # Replace with your desired username
+      POSTGRES_PASSWORD: KlajdiMarsel123# # Replace with your desired password
+      POSTGRES_DB: CatalogDb       # Replace with your desired database name
+      restart: always
+    volumes:
+      - catalogdb_data:/var/lib/postgresql/data # Persistent storage for database data
+
